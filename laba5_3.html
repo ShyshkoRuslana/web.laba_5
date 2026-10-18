@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Анкета користувача</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Анкета користувача (HTML5 Forms)</h1>
+    <p>Заповніть форму нижче.</p>
+
+    <!-- Демонстрація методу GET (дані підуть в URL) -->
+    <h2>1. Форма з методом GET</h2>
+    <form action="" method="get">
+
+        <!-- БЛОК 1: Особисті дані -->
+        <fieldset>
+            <legend>Особисті дані</legend>
+
+            <p class="field">
+                <label for="fullname">Повне ім'я:</label>
+                <input type="text" id="fullname" name="fullname" value="Іван Іванов" placeholder="Введіть ваше ім'я та прізвище" size="45" required tabindex="1">
+            </p>
+
+            <p class="field">
+                <label for="email">Електронна пошта (Email):</label>
+                <input type="email" id="email" name="email" value="example@gmail.com" placeholder="name@domain.com" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="45" required tabindex="2">
+            </p>
+
+            <p class="field">
+                <label for="phone">Мобільний номер:</label>
+                <input type="tel" id="phone" name="phone" value="+380991234567" placeholder="+380XXXXXXXXX" pattern="^\+380\d{9}$" size="45" required tabindex="3">
+            </p>
+
+            <p class="field">
+                <label for="password">Пароль (6 символів, містить велику, малу літеру та цифру):</label>
+                <input type="password" id="password" name="password" value="Abc123" placeholder="Введіть пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" size="45" required tabindex="4">
+            </p>
+
+            <p class="field">
+                <label for="birthdate">Дата народження:</label>
+                <input type="date" id="birthdate" name="birthdate" value="2000-01-01" required tabindex="5">
+            </p>
+        </fieldset>
+
+        <!-- БЛОК 2: Вподобання та опитування -->
+        <fieldset>
+            <legend>Вподобання та опитування</legend>
+
+            <p><strong>Оцініть зручність інтерфейсу:</strong></p>
+            <div class="option-group">
+                <label><input type="radio" name="ui_rating" value="bad" tabindex="6"> Погано</label>
+                <label><input type="radio" name="ui_rating" value="normal" tabindex="7"> Нормально</label>
+                <label><input type="radio" name="ui_rating" value="good" tabindex="8"> Добре</label>
+            </div>
+
+            <p><strong>Ваш досвід програмування:</strong></p>
+            <div class="option-group">
+                <label><input type="radio" name="experience" value="beginner" tabindex="9"> Початківець</label>
+                <label><input type="radio" name="experience" value="intermediate" checked tabindex="10"> Середній (активно за замовчуванням)</label>
+                <label><input type="radio" name="experience" value="advanced" tabindex="11"> Професіонал</label>
+            </div>
+
+            <p><strong>Які мови програмування ви знаєте? (оберіть кілька):</strong></p>
+            <div class="option-group">
+                <label><input type="checkbox" name="skills" value="html" tabindex="12"> HTML</label>
+                <label><input type="checkbox" name="skills" value="css" tabindex="13"> CSS</label>
+                <label><input type="checkbox" name="skills" value="js" tabindex="14"> JavaScript</label>
+                <label><input type="checkbox" name="skills" value="python" tabindex="15"> Python</label>
+            </div>
+        </fieldset>
+
+        <!-- БЛОК 3: Списки вибору та текстові області -->
+        <fieldset>
+            <legend>Списки вибору та текстові області</legend>
+
+            <p class="field">
+                <label for="city">Оберіть місто:</label>
+                <select id="city" name="city" tabindex="16">
+                    <option value="kyiv">Київ</option>
+                    <option value="lviv">Львів</option>
+                    <option value="chernivtsi" selected>Чернівці (вибрано за замовчуванням)</option>
+                    <option value="odesa">Одеса</option>
+                    <option value="kharkiv">Харків</option>
+                </select>
+            </p>
+
+            <p class="field">
+                <label for="colors">Улюблені кольори (можна обрати кілька, затиснувши Ctrl/Cmd):</label>
+                <select id="colors" name="colors" multiple size="4" tabindex="17">
+                    <option value="red">Червоний</option>
+                    <option value="blue">Синій</option>
+                    <option value="green">Зелений</option>
+                    <option value="yellow">Жовтий</option>
+                    <option value="black">Чорний</option>
+                    <option value="white">Білий</option>
+                </select>
+            </p>
+
+            <p class="field">
+                <label for="device">Оберіть гаджет:</label>
+                <select id="device" name="device" tabindex="18">
+                    <optgroup label="Смартфони">
+                        <option value="iphone">iPhone</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="xiaomi">Xiaomi</option>
+                    </optgroup>
+                    <optgroup label="Планшети">
+                        <option value="ipad">iPad</option>
+                        <option value="galaxytab">Galaxy Tab</option>
+                        <option value="lenovotab">Lenovo Tab</option>
+                    </optgroup>
+                    <optgroup label="Ноутбуки">
+                        <option value="macbook">MacBook</option>
+                        <option value="asus">Asus</option>
+                        <option value="lenovo">Lenovo</option>
+                    </optgroup>
+                    <optgroup label="Навушники">
+                        <option value="airpods">AirPods</option>
+                        <option value="sony">Sony</option>
+                        <option value="jbl">JBL</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <p class="field">
+                <label for="browser">Улюблений браузер (можна ввести свій або обрати зі списку):</label>
+                <input list="browsers" id="browser" name="browser" value="Google Chrome" placeholder="Почніть вводити..." size="45" tabindex="19">
+                <datalist id="browsers">
+                    <option value="Google Chrome">
+                    <option value="Mozilla Firefox">
+                    <option value="Microsoft Edge">
+                    <option value="Safari">
+                    <option value="Opera">
+                </datalist>
+            </p>
+
+            <p class="field">
+                <label for="bio">Коротка інформація про себе:</label>
+                <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Розкажіть про себе..." tabindex="20">Студент, вивчаю веб-розробку.</textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit" tabindex="21">Відправити (GET)</button>
+            <button type="reset" tabindex="22">Очистити форму</button>
+        </p>
+
+    </form>
+
+    <hr>
+
+    <!-- Демонстрація методу POST та завантаження файлів -->
+    <h2>2. Форма з методом POST та завантаженням файлів</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Завантаження аудіофайлів</legend>
+            <p class="field">
+                <label for="audio_files">Оберіть аудіофайли (тільки .mp3, .wav тощо, можна кілька):</label>
+                <input type="file" id="audio_files" name="audio_files" accept="audio/*" multiple required tabindex="23">
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit" tabindex="24">Завантажити (POST)</button>
+        </p>
+
+    </form>
+</div>
+
+<p class="back-link"><a href="../index.html">Повернутись на головну</a></p>
+
+</body>
+</html>

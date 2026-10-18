@@ -1,0 +1,69 @@
+/* Загальні стилі сторінки (замість bgcolor, text та <center>) */
+body {
+    background-color: #f0ead2;
+    color: #2c2520;
+}
+
+/* Контейнер замість таблиці шириною 700 */
+.container {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Заголовки (замість <font color>) */
+h1,
+h2 {
+    color: #a98467;
+}
+
+/* Блоки fieldset */
+fieldset {
+    background-color: #dde5b6;
+    border: 2px solid #a98467;
+    margin-bottom: 1em;
+    border-radius: 12px;
+}
+
+legend {
+    color: #a98467;
+    font-weight: bold;
+}
+
+/* Абзаци з полями: мітка над полем (замість <br>) */
+.field {
+    text-align: left;
+}
+
+.field label {
+    display: block;
+}
+
+/* Групи radio / checkbox: кожен варіант з нового рядка */
+.option-group {
+    text-align: left;
+}
+
+.option-group label {
+    display: block;
+}
+
+/* Кнопки */
+.container > form > p,
+.container p {
+    text-align: left;
+
+}
+
+/* Горизонтальна лінія (замість <hr color size>) */
+hr {
+    border: none;
+    border-top: 2px solid #adc178;
+    margin: 1.5em 0;
+}
+
+/* Посилання внизу сторінки */
+.back-link {
+    text-align: center;
+    margin-top: 1.5em;
+}
