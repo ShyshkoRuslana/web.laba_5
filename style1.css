@@ -1,0 +1,82 @@
+div {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+/* Загальні вимоги до маркерованих списків */
+ul {
+    list-style: none;
+    list-style-position: inside;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+}
+
+/* 1-й рівень */
+ul.level1 {
+    background-color: rgb(103, 158, 128);
+    padding: 0 20px 0 50px;
+}
+
+ul.level1 > li {
+    background-image: url("checklist.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 30px;
+    margin-left: -40px;
+    padding-left: 40px;
+}
+
+/* 2-й рівень */
+ul.level2 {
+    font-size: 18px;
+    font-style: italic;
+    padding: 0;
+}
+
+ul.level2 > li {
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+}
+
+/* Іконки елементів 2-го рівня */
+.route    { background-image: url("route.png"); }
+.plane    { background-image: url("flight.png"); }
+.hotel    { background-image: url("hotel.png"); }
+.car      { background-image: url("car.png"); }
+.bar      { background-image: url("bar.png"); }
+.casino   { background-image: url("casino.png"); }
+.museum   { background-image: url("museum.png"); }
+.festival { background-image: url("festival.png"); }
+
+/* span – загальні */
+span {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+/* span в списку 1-го рівня */
+ul.level1 > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+
+/* span в списку 2-го рівня */
+ul.level2 > li > span {
+    background-color: rgb(218, 106, 32);
+}
