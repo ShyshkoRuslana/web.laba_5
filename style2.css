@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Загальні стилі таблиці */
+table {
+    width: 900px;
+    max-width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 2px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* ---------- Шапка таблиці ---------- */
+thead th {
+    height: 90px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Кожен стовпець шапки – свій відтінок однієї гами: від світлого до темного */
+thead th:nth-child(1) {
+    background-color: #eddcdc;
+    font-size: 16px;
+}
+
+thead th:nth-child(2) {
+    background-color: #dfbab6;
+}
+
+thead th:nth-child(3) {
+    background-color: #cd9a95;
+}
+
+thead th:nth-child(4) {
+    background-color: #873e38;
+}
+
+thead th:nth-child(5) {
+    background-color: #5c2723;
+}
+
+/* ---------- Тіло таблиці ---------- */
+tbody th,
+tbody td {
+    height: 80px;
+    font-size: 22px;
+}
+
+/* Перший стовпець – назви функцій */
+tbody th {
+    background-color: #ab5a53;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+/* Чергування рядків: непарні – темніші, парні – світліші */
+tbody tr:nth-child(odd) td {
+    background-color: #dfbab6;
+    color: #4a3330;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #eddcdc;
+    color: #4a3330;
+}
