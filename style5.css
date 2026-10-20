@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f9fc;
+    color: #0b3a52;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin: 0 0 10px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* ---------- Частина 1: box-sizing ---------- */
+section:nth-of-type(1) div {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #1a8fc0;
+    background-color: #cdeefa;
+    margin: 20px;
+}
+
+section:nth-of-type(1) div:nth-of-type(1) {
+    box-sizing: content-box;
+    /* Загальна ширина: 300 + 2 * 20 + 2 * 5 = 350px */
+}
+
+section:nth-of-type(1) div:nth-of-type(2) {
+    box-sizing: border-box;
+    /* Загальна ширина: 300px (padding і border входять у width) */
+}
+
+/* ---------- Частина 2: overflow ---------- */
+section:nth-of-type(2) {
+    /* запас місця знизу, щоб текст з overflow: visible не накладався на наступну частину */
+    padding-bottom: 80px;
+}
+
+section:nth-of-type(2) div {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 230px;
+    max-height: 80px;
+    margin: 20px;
+    border: 2px solid #1a8fc0;
+    background-color: #cdeefa;
+    font-size: 14px;
+}
+
+section:nth-of-type(2) strong {
+    display: block;
+}
+
+section:nth-of-type(2) div:nth-of-type(1) {
+    overflow: visible;   /* текст виходить за межі блоку */
+}
+
+section:nth-of-type(2) div:nth-of-type(2) {
+    overflow: hidden;    /* зайвий текст обрізається */
+}
+
+section:nth-of-type(2) div:nth-of-type(3) {
+    overflow: scroll;    /* смуги прокручування показані завжди */
+}
+
+section:nth-of-type(2) div:nth-of-type(4) {
+    overflow: auto;      /* смуги прокручування лише за потреби */
+}
+
+/* ---------- Частина 3: display ---------- */
+nav ul {
+    list-style: none;  
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #1a8fc0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #0f6f99;
+}
+
+nav li:nth-child(3) {
+    display: none;
+}
